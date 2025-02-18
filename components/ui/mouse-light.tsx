@@ -17,9 +17,13 @@ export function MouseLight() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed inset-0 z-30 opacity-40"
+      className="pointer-events-none fixed inset-0 z-30 mix-blend-soft-light"
       animate={{
-        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+        background: `radial-gradient(
+          600px circle at ${mousePosition.x}px ${mousePosition.y}px,
+          rgba(255, 255, 255, 0.15),
+          rgba(255, 255, 255, 0) 80%
+        )`
       }}
     />
   )

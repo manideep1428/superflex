@@ -4,10 +4,11 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
-import { Planet } from "./components/planet"
-import { Asteroid } from "./components/asteroid"
-import { SpaceBackground } from "./components/space-background"
-import { FallingAsteroid } from "./components/falling-asteroid"
+import { FallingAsteroid } from "@/components/fallingAstroid"
+import { Planet } from "@/components/planet"
+import { Asteroid } from "@/components/asteroid"
+import { SpaceBackground } from "@/components/space-background"
+import { MouseLight } from "@/components/ui/mouse-light"
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,8 +20,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
       {/* Space Background */}
-      <SpaceBackground />
-
+      <SpaceBackground/>
+       <MouseLight/>
       <FallingAsteroid />
 
       {/* Navigation */}
